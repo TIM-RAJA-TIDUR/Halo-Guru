@@ -1,73 +1,73 @@
 [
     {
-        "date": "2022-05-13T00:00:00.000Z",
-        "symptomName": "Batuk",
+        "dateAppointment": "2022-05-13T00:00:00.000Z",
+        "symtomName": "Batuk",
         "UserId": 1,
         "DoctorId": 6
     },
     {
-        "date": "2022-06-13T00:00:00.000Z",
-        "symptomName": "Gatal",
+        "dateAppointment": "2022-06-13T00:00:00.000Z",
+        "symtomName": "Gatal",
         "UserId": 2,
         "DoctorId": 3
     },
     {
-        "date": "2022-05-13T00:00:00.000Z",
-        "symptomName": "Gatal",
+        "dateAppointment": "2022-05-13T00:00:00.000Z",
+        "symtomName": "Gatal",
         "UserId": 8,
         "DoctorId": 3
     },
     {
-        "date": "2022-05-13T00:00:00.000Z",
-        "symptomName": "Sesak Nafas",
+        "dateAppointment": "2022-05-13T00:00:00.000Z",
+        "symtomName": "Sesak Nafas",
         "UserId": 3,
         "DoctorId": 2
     },
     {
-        "date": "2022-05-13T00:00:00.000Z",
-        "symptomName": "Batuk",
+        "dateAppointment": "2022-05-13T00:00:00.000Z",
+        "symtomName": "Batuk",
         "UserId": 4,
         "DoctorId": 6
     },
     {
-        "date": "2022-05-13T00:00:00.000Z",
-        "symptomName": "Sesak Nafas",
+        "dateAppointment": "2022-05-13T00:00:00.000Z",
+        "symtomName": "Sesak Nafas",
         "UserId": 5,
         "DoctorId": 7
     },
     {
-        "date": "2022-05-13T00:00:00.000Z",
-        "symptomName": "Sakit Gigi",
+        "dateAppointment": "2022-05-13T00:00:00.000Z",
+        "symtomName": "Sakit Gigi",
         "UserId": 6,
         "DoctorId": 1
     },
     {
-        "date": "2022-05-13T00:00:00.000Z",
-        "symptomName": "Kejang",
+        "dateAppointment": "2022-05-13T00:00:00.000Z",
+        "symtomName": "Kejang",
         "UserId": 7,
         "DoctorId": 5
     },
     {
-        "date": "2022-05-13T00:00:00.000Z",
-        "symptomName": "Sakit Gigi",
+        "dateAppointment": "2022-05-13T00:00:00.000Z",
+        "symtomName": "Sakit Gigi",
         "UserId": 8,
         "DoctorId": 1
     },
     {
-        "date": "2022-05-13T00:00:00.000Z",
-        "symptomName": "Batuk",
+        "dateAppointment": "2022-05-13T00:00:00.000Z",
+        "symtomName": "Batuk",
         "UserId": 9,
         "DoctorId": 6
     },
     {
-        "date": "2022-05-13T00:00:00.000Z",
-        "symptomName": "Kejang",
+        "dateAppointment": "2022-05-13T00:00:00.000Z",
+        "symtomName": "Kejang",
         "UserId": 10,
         "DoctorId": 5
     },
     {
-        "date": "2022-05-13T00:00:00.000Z",
-        "symptomName": "Sakit Gigi",
+        "dateAppointment": "2022-05-13T00:00:00.000Z",
+        "symtomName": "Sakit Gigi",
         "UserId": 2,
         "DoctorId": 4
     }

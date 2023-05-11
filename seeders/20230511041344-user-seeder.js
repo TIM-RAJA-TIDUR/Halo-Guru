@@ -3,7 +3,6 @@
 const fs = require("fs")
 
 let data = JSON.parse(fs.readFileSync("./data/users.json","utf-8")).map(el => {
-  el.role = "admin",
   el.createdAt = new Date()
   el.updatedAt = new Date()
   return el

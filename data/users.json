@@ -2,51 +2,61 @@
     {
       "name": "Vincent",
       "email": "vincent@gmail.com",
-      "password": "inipassword"
+      "password": "inipassword",
+      "role":"Admin"
     },
     {
       "name": "Rizki",
       "email": "rizki@gmail.com",
-      "password": "itupassword"
+      "password": "itupassword",
+      "role":"Admin"
     },
     {
       "name": "Willy",
       "email": "willy@gmail.com",
-      "password": "manapassword"
+      "password": "manapassword",
+      "role":"Admin"
     },
     {
       "name": "Jubaedah",
       "email": "jubaedah@gmail.com",
-      "password": "123password"
+      "password": "123password",
+      "role":"User"
     },
     {
       "name": "Juminten",
       "email": "juminten@gmail.com",
-      "password": "lohpassword"
+      "password": "lohpassword",
+      "role":"User"
     },
     {
       "name": "Agus",
       "email": "agus@gmail.com",
-      "password": "asdasdasd"
+      "password": "asdasdasd",
+      "role":"User"
     },
     {
       "name": "Harry Potter",
       "email": "harry@gmail.com",
-      "password": "123123123"
+      "password": "123123123",
+      "role":"User"
     },
     {
       "name": "Ron Weasley",
       "email": "ron@gmail.com",
-      "password": "scabbers"
+      "password": "scabbers",
+      "role":"User"
     },
     {
       "name": "Hermione Granger",
       "email": "hermione@gmail.com",
-      "password": "leviohsa"
+      "password": "leviohsa",
+      "role":"User"
     },
     {
       "name": "Hagrid",
       "email": "hagrid@gmail.com",
-      "password": "spiders"
+      "password": "spiders",
+      "role":"User"
     }
 ]

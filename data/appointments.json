@@ -1,0 +1,74 @@
+[
+    {
+        "date": "2022-05-13T00:00:00.000Z",
+        "symptomName": "Batuk",
+        "UserId": 1,
+        "DoctorId": 6
+    },
+    {
+        "date": "2022-06-13T00:00:00.000Z",
+        "symptomName": "Gatal",
+        "UserId": 2,
+        "DoctorId": 3
+    },
+    {
+        "date": "2022-05-13T00:00:00.000Z",
+        "symptomName": "Gatal",
+        "UserId": 8,
+        "DoctorId": 3
+    },
+    {
+        "date": "2022-05-13T00:00:00.000Z",
+        "symptomName": "Sesak Nafas",
+        "UserId": 3,
+        "DoctorId": 2
+    },
+    {
+        "date": "2022-05-13T00:00:00.000Z",
+        "symptomName": "Batuk",
+        "UserId": 4,
+        "DoctorId": 6
+    },
+    {
+        "date": "2022-05-13T00:00:00.000Z",
+        "symptomName": "Sesak Nafas",
+        "UserId": 5,
+        "DoctorId": 7
+    },
+    {
+        "date": "2022-05-13T00:00:00.000Z",
+        "symptomName": "Sakit Gigi",
+        "UserId": 6,
+        "DoctorId": 1
+    },
+    {
+        "date": "2022-05-13T00:00:00.000Z",
+        "symptomName": "Kejang",
+        "UserId": 7,
+        "DoctorId": 5
+    },
+    {
+        "date": "2022-05-13T00:00:00.000Z",
+        "symptomName": "Sakit Gigi",
+        "UserId": 8,
+        "DoctorId": 1
+    },
+    {
+        "date": "2022-05-13T00:00:00.000Z",
+        "symptomName": "Batuk",
+        "UserId": 9,
+        "DoctorId": 6
+    },
+    {
+        "date": "2022-05-13T00:00:00.000Z",
+        "symptomName": "Kejang",
+        "UserId": 10,
+        "DoctorId": 5
+    },
+    {
+        "date": "2022-05-13T00:00:00.000Z",
+        "symptomName": "Sakit Gigi",
+        "UserId": 2,
+        "DoctorId": 4
+    }
+]

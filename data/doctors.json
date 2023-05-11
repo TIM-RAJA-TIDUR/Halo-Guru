@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Strange",
+        "DivisionId": 1
+    },
+    {
+        "name": "Doom",
+        "DivisionId": 2
+    },
+    {
+        "name": "Frankenstein",
+        "DivisionId": 4
+    },
+    {
+        "name": "John Watson",
+        "DivisionId": 1
+    },
+    {
+        "name": "Jonathan Crane",
+        "DivisionId": 5
+    },
+    {
+        "name": "Danny Wellbeck",
+        "DivisionId": 3
+    },
+    {
+        "name": "Spade Hearts",
+        "DivisionId": 2
+    },
+    {
+        "name": "Zoidberg",
+        "DivisionId": 4
+    } 
+]

@@ -103,7 +103,7 @@ class Controller {
     }
 
     static appointmentGet(req, res){
-
+        const {errors} = req.query;
         const {DoctorId} = req.params
 
         let options = {
@@ -114,10 +114,10 @@ class Controller {
 
         Doctor.findByPk(DoctorId,options)
             .then(data => {
-                res.render("appointment", {data})
+                res.render("appointment", {data, errors})
             })
             .catch(err => {
-                console.log(err);
+                res.send(err);
             })
         
 
@@ -133,7 +133,15 @@ class Controller {
                 res.redirect("/")
             })
             .catch(err => {
-                console.log(err);
+                let errors = []
+            if(err.name === "SequelizeValidationError"){
+                err.errors.forEach(el => {
+                    errors.push(el.message)
+                });
+                res.redirect(`/appointment/${DoctorId}?errors=${err}`)
+            }else{
+                res.send(err)
+            }
             })
 
     }

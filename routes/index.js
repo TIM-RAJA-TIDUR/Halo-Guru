@@ -15,6 +15,6 @@ router.get('/doctors', Controller.showDoctors)
 router.get("/user/:id", Controller.showUser)
 router.get('/appointment/:DoctorId', Controller.appointmentGet)
 router.post('/appointment/:DoctorId', Controller.appointmentPost)
-router.post('/logout', Controller.logout)
+router.get('/logout', Controller.logout)
 
 module.exports = router

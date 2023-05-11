@@ -81,7 +81,7 @@
 </style>
 <body>
     <h1>Choose your doctor</h1>
- 
+    <button type="button" onclick="window.location.href='/logout'">Logout</button><br>
     <!-- Tab links -->
 <div class="tab">
     <% divisions.forEach(division => { %>
@@ -138,10 +138,7 @@
           </tr>
        <% } %>
       <% })%>
-     
     </table>
-    
-
 </body>
 <script>
     function openCity(evt, cityName) {

@@ -35,7 +35,11 @@ div {
 <body>
 
 <h3>Buat Janji</h3>
-
+    <% if(errors) {  %>
+      <% errors.split(',').forEach(el => { %>
+          <p style="color: red;"><%= el %></p>
+    <% }) %>
+    <% } %>
 <div>
   <form action="/appointment/<%= data.id%>" method="post">
     <label for="name">Nama Doctor</label>

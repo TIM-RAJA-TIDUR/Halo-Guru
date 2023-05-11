@@ -1,10 +1,39 @@
-const {User} = require("../models")
+const {User,Doctor, Division,Appointment} = require("../models")
 const {backHashPassword} = require("../helper/bcrypt")
 
 class Controller {
 
     static home(req, res){
-        res.render("home")
+
+        let option1 = {
+            include:{
+                model:Doctor
+            }
+        }
+
+        let option2 = {
+            where:{
+                id:req.session.userId
+            },
+            include:{
+                model: Doctor
+            }
+        }
+
+        let divisions = []
+        Division.findAll(option1)
+        .then((data)=> {
+            divisions = data
+            return User.findOne(option2)
+        })
+        .then(appointments => {
+            res.render("home", {divisions,appointments})
+        })
+        .catch(err => {
+            console.log(err);
+        })
+        
+        
     }
 
     static registerForm(req, res){
@@ -69,6 +98,44 @@ class Controller {
             }
         })
     }
+
+    static appointmentGet(req, res){
+
+        const {DoctorId} = req.params
+
+        let options = {
+            include: {
+                model: Division
+            }
+        }
+
+        Doctor.findByPk(DoctorId,options)
+            .then(data => {
+                res.render("appointment", {data})
+            })
+            .catch(err => {
+                console.log(err);
+            })
+        
+
+    }
+
+    static appointmentPost(req, res){
+        const {DoctorId} = req.params
+        const UserId = req.session.userId
+        const {dateAppointment,symtomName} = req.body
+
+        Appointment.create({dateAppointment,symtomName,UserId,DoctorId})
+            .then(_ => {
+                res.redirect("/")
+            })
+            .catch(err => {
+                console.log(err);
+            })
+
+    }
+
+    
 }
 
 module.exports = Controller

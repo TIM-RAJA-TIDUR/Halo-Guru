@@ -7,11 +7,13 @@ router.get('/register', Controller.registerForm)
 router.post('/register', Controller.postRegister)
 router.get('/login', Controller.loginForm)
 router.post('/login', Controller.postLogin)
-router.post('/logout', Controller.logout)
 
 
 router.use(isLogin)
 
 router.get('/', Controller.home)
+router.get('/appointment/:DoctorId', Controller.appointmentGet)
+router.post('/appointment/:DoctorId', Controller.appointmentPost)
+router.post('/logout', Controller.logout)
 
 module.exports = router

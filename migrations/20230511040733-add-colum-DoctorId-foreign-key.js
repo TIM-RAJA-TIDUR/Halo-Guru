@@ -21,7 +21,7 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface("Appointments", "DoctorId")
+    await queryInterface.removeColumn("Appointments", "DoctorId")
     /**
      * Add reverting commands here.
      *

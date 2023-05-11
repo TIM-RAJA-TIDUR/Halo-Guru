@@ -140,8 +140,8 @@ class Controller {
                 <ul>
                 <li>Name: {{name}}</li>
                 <li>Date: {{date}}</li>
-                <li>Doctor: {{symtom}}</li>
-                <li>Symptom: {{symptoms}}</li>
+                <li>Doctor: {{doctor}}</li>
+                <li>Symptom: {{symtom}}</li>
                 <br />
                 </ul>
             </body>

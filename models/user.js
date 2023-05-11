@@ -15,7 +15,10 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       User.hasOne(models.Profile, {foreignKey:"UserId"})
       User.belongsToMany(models.Doctor, { through: models.Appointment });
+    }
 
+    static genderName(gender) {
+      return gender === 'Male' ? 'Mr.' : 'Ms.'
     }
   }
   User.init({

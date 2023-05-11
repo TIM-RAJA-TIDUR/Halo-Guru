@@ -1,72 +1,72 @@
 [
-    {
-      "ktp": "1234567891011121",
-      "address": "Jl.Jalanan no.1 Bandung, JawaBarat",
-      "gender": "Male",
-      "avatar": "https://imgur.com/o78cJXl",
-      "UserId": 1
-    },
-    {
-      "ktp": "1234567891011122",
-      "address": "Jl.Jalanan no.2 Bandung, JawaBarat",
-      "gender": "Male",
-      "avatar": "https://imgur.com/MKhMEZ7",
-      "UserId": 2
-    },
-    {
-      "ktp": "1234567891011123",
-      "address": "Jl.Jalanan no.3 Bandung, JawaBarat",
-      "gender": "Male",
-      "avatar": "https://imgur.com/8R1EB4K",
-      "UserId": 3
-    },
-    {
-      "ktp": "1234567891011124",
-      "address": "Jl.Jalanan no.4 Bandung, JawaBarat",
-      "gender": "Female",
-      "avatar": "https://imgur.com/EPpsLXU",
-      "UserId": 4
-    },
-    {
-      "ktp": "1234567891011125",
-      "address": "Jl.Jalanan no.5 Bandung, JawaBarat",
-      "gender": "Female",
-      "avatar": "https://imgur.com/WfyLKC1",
-      "UserId": 5
-    },
-    {
-      "ktp": "1234567891011126",
-      "address": "Jl.Jalanan no.6 Bandung, JawaBarat",
-      "gender": "Male",
-      "avatar": "https://imgur.com/PqGBRu1",
-      "UserId": 6
-    },
-    {
-      "ktp": "1234567891011127",
-      "address": "Jl.Jalanan no.7 Bandung, JawaBarat",
-      "gender": "Male",
-      "avatar": "https://imgur.com/QBD7xfj",
-      "UserId": 7
-    },
-    {
-      "ktp": "1234567891011128",
-      "address": "Jl.Jalanan no.8 Bandung, JawaBarat",
-      "gender": "Male",
-      "avatar": "https://imgur.com/nNZL04d",
-      "UserId": 8
-    },
-    {
-      "ktp": "1234567891011129",
-      "address": "Jl.Jalanan no.9 Bandung, JawaBarat",
-      "gender": "Female",
-      "avatar": "https://imgur.com/u1O1iID",
-      "UserId": 9
-    },
-    {
-      "ktp": "1234567891011120",
-      "address": "Jl.Jalanan no.10 Bandung, JawaBarat",
-      "gender": "Male",
-      "avatar": "https://imgur.com/o4ONYJ6",
-      "UserId": 10
-    }
+  {
+    "ktp": "1234567891011121",
+    "address": "Jl.Jalanan no.1 Bandung, JawaBarat",
+    "gender": "Male",
+    "avatar": "https://i.imgur.com/o78cJXl.jpeg",
+    "UserId": 1
+  },
+  {
+    "ktp": "1234567891011122",
+    "address": "Jl.Jalanan no.2 Bandung, JawaBarat",
+    "gender": "Male",
+    "avatar": "https://i.imgur.com/MKhMEZ7.jpeg",
+    "UserId": 2
+  },
+  {
+    "ktp": "1234567891011123",
+    "address": "Jl.Jalanan no.3 Bandung, JawaBarat",
+    "gender": "Male",
+    "avatar": "https://i.imgur.com/8R1EB4K.jpeg",
+    "UserId": 3
+  },
+  {
+    "ktp": "1234567891011124",
+    "address": "Jl.Jalanan no.4 Bandung, JawaBarat",
+    "gender": "Female",
+    "avatar": "https://i.imgur.com/EPpsLXU.jpeg",
+    "UserId": 4
+  },
+  {
+    "ktp": "1234567891011125",
+    "address": "Jl.Jalanan no.5 Bandung, JawaBarat",
+    "gender": "Female",
+    "avatar": "https://i.imgur.com/WfyLKC1.jpeg",
+    "UserId": 5
+  },
+  {
+    "ktp": "1234567891011126",
+    "address": "Jl.Jalanan no.6 Bandung, JawaBarat",
+    "gender": "Male",
+    "avatar": "https://i.imgur.com/PqGBRu1.jpeg",
+    "UserId": 6
+  },
+  {
+    "ktp": "1234567891011127",
+    "address": "Jl.Jalanan no.7 Bandung, JawaBarat",
+    "gender": "Male",
+    "avatar": "https://i.imgur.com/QBD7xfj.jpeg",
+    "UserId": 7
+  },
+  {
+    "ktp": "1234567891011128",
+    "address": "Jl.Jalanan no.8 Bandung, JawaBarat",
+    "gender": "Male",
+    "avatar": "https://i.imgur.com/nNZL04d.jpeg",
+    "UserId": 8
+  },
+  {
+    "ktp": "1234567891011129",
+    "address": "Jl.Jalanan no.9 Bandung, JawaBarat",
+    "gender": "Female",
+    "avatar": "https://i.imgur.com/u1O1iID.jpeg",
+    "UserId": 9
+  },
+  {
+    "ktp": "1234567891011120",
+    "address": "Jl.Jalanan no.10 Bandung, JawaBarat",
+    "gender": "Male",
+    "avatar": "https://i.imgur.com/o4ONYJ6.jpeg",
+    "UserId": 10
+  }
 ]

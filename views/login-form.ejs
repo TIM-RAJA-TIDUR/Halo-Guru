@@ -9,7 +9,9 @@
 <body>
     <h1>Please Log In First</h1>
     <button type="button" onclick="window.location.href='/'">Home</button><br>
-
+    <% if(errors) {  %>
+            <p style="color: red;"><%= errors  %></p>
+    <% } %>
     <form action="/login" method="post">
         <p>
             <label>Email</label><br>

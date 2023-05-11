@@ -10,7 +10,6 @@ router.post('/login', Controller.postLogin)
 
 
 router.use(isLogin)
-
 router.get('/', Controller.home)
 router.get('/appointment/:DoctorId', Controller.appointmentGet)
 router.post('/appointment/:DoctorId', Controller.appointmentPost)

@@ -1,4 +1,6 @@
-const {User,Doctor, Division,Appointment} = require("../models")
+const { User ,Doctor, Division,Appointment} = require("../models")
+const { formatter } = require("../helper/formatName")
+const {Op} = require("sequelize")
 const {backHashPassword} = require("../helper/bcrypt")
 
 class Controller {
@@ -54,7 +56,8 @@ class Controller {
     }
 
     static loginForm(req, res){
-        res.render("login-form")
+        const {errors} = req.query;
+        res.render("login-form", {errors})
     }
 
     static postLogin(req,res){
@@ -134,8 +137,50 @@ class Controller {
             })
 
     }
-
     
+    static showDoctors(req,res){
+        let { filter, search } =req.query;
+        const options = {
+            include: Division,
+            order: [['id', 'asc']]
+        }
+        if(filter){
+            options.where = {
+                DivisionId: `${filter}`
+            }
+        }
+        if(search){
+            options.where = options.where || {};
+            options.where.name = {[Op.iLike]: `%${search}%`};
+        }
+        let doctors;
+        Doctor.findAll(options)
+        .then(allDoctor => {
+            doctors = allDoctor
+            return Division.findAll()
+        })
+        .then(divisions => {
+            res.render('doctors', {doctors, divisions, formatter})
+        })
+        .catch(err => {
+            res.send(err)
+        })
+    }
+
+    static showUser(req,res){
+        const {id} = req.params
+        User.findByPk(id, {
+            include: Profile
+        })
+        .then(user => {
+            const title = User.genderName(user.Profile.gender)
+            const fullName = `${title} ${user.name}`
+            res.render('user', {user, fullName})
+        })
+        .catch(err => {
+            res.send(err)
+        })
+    }  
 }
 
 module.exports = Controller

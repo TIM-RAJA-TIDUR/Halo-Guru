@@ -9,7 +9,7 @@
 <body>
     <h1>Available Doctor</h1>
     <form action="/doctors" method="get">
-        <select name="Filter">
+        <select name="filter">
             <option value="" disabled selected>--Please Choose--</option>
             <% divisions.forEach(el => { %>
                 <option value="<%= el.id %>"><%= el.name %></option>
@@ -28,7 +28,6 @@
                 <th>No</th>
                 <th>Name</th>
                 <th>Division</th>
-                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -38,7 +37,7 @@
                     <td><%= formatter(el.name) %></td>
                     <td><%= el.Division.name %></td>
                     <td>
-                        <button type="button" onclick="window.location.href='/'">Make An Appointment</button>
+                        <button type="button" onclick="window.location.href='/appointment/<%= el.id %> %>'">Make An Appointment</button>
                     </td>
                 </tr>
             <% }); %>

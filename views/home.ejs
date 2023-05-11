@@ -87,8 +87,9 @@
     <% divisions.forEach(division => { %>
         <button class="tablinks" onclick="openCity(event, '<%= division.name %>')">Spesialis <%= division.name %></button>
     <% }) %>
+    <button class="tablinks" onclick="window.location.href='/doctors'">Show All Doctors</button>
 </div>
-  
+
   <!-- Tab content -->
   <% divisions.forEach(division => { %>
   <div id="<%= division.name %>" class="tabcontent">

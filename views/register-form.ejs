@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Please Register Here!!</h1>
+    <button type="button" onclick="window.location.href='/'">Home</button><br>
+
+    <form action="/register" method="post">
+        <p>
+            <label>Name</label><br>
+            <input type="text" name="name">
+        </p>
+        <p>
+            <label>Email</label><br>
+            <input type="text" name="email">
+        </p>
+        <p>
+            <label>Password</label><br>
+            <input type="text" name="password">
+        </p>
+        <p>
+            <label>Role</label><br>
+            <select name="role">
+                <option value="" disabled selected>--Please Choose--</option>
+                <option value="Admin">Admin</option>
+                <option value="User">User</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Register">
+        </p>
+    </form>
+</body>
+</html>

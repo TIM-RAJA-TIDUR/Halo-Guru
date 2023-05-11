@@ -81,6 +81,9 @@
 </style>
 <body>
     <h1>Choose your doctor</h1>
+    <% if(role == "Admin"){ %>
+      <a href="/doctor/add"><button>Add Doctor</button></a>
+    <% } %>
     <button type="button" onclick="window.location.href='/logout'">Logout</button><br>
     <!-- Tab links -->
 <div class="tab">

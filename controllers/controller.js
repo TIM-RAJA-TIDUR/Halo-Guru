@@ -30,7 +30,8 @@ class Controller {
             return User.findOne(option2)
         })
         .then(appointments => {
-            res.render("home", {divisions,appointments})
+            let role = req.session.role
+            res.render("home", {divisions,appointments,role})
         })
         .catch(err => {
             console.log(err);
@@ -245,7 +246,30 @@ class Controller {
         .catch(err => {
             res.send(err)
         })
-    }  
+    }
+
+    static doctorAddGet(req, res){
+
+        Division.findAll()
+            .then(divisions => {
+                res.render("formAddDoctor",{divisions})
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+
+    static doctorAddPost(req, res){
+
+        const {name ,DivisionId} = req.body
+        Doctor.create({name ,DivisionId})
+        .then(_ => {
+            res.redirect("/")
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
 }
 
 module.exports = Controller

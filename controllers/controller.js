@@ -2,6 +2,7 @@ const { User ,Doctor, Division,Appointment} = require("../models")
 const { formatter } = require("../helper/formatName")
 const {Op} = require("sequelize")
 const {backHashPassword} = require("../helper/bcrypt")
+const pdf = require('../node-pdf/index');
 
 class Controller {
 
@@ -128,8 +129,64 @@ class Controller {
         const UserId = req.session.userId
         const {dateAppointment,symtomName} = req.body
 
+        let htm_template = `<!DOCTYPE html>
+        <html>
+            <head>
+                <mate charest="utf-8" />
+                <title>Appointment</title>
+            </head>
+            <body>
+                <h1>Appointment</h1>
+                <ul>
+                <li>Name: {{name}}</li>
+                <li>Date: {{date}}</li>
+                <li>Doctor: {{symtom}}</li>
+                <li>Symptom: {{symptoms}}</li>
+                <br />
+                </ul>
+            </body>
+        </html>`;
+        var options = {
+            format: 'A3',
+            orientation: 'portrait',
+            border: '10mm',
+            header: {
+                height: '45mm',
+                contents: '<div style="text-align: center;">Author: Shyam Hajare</div>'
+            },
+            footer: {
+                height: '28mm',
+                contents: {
+                    first: 'Cover page',
+                    2: 'Second page', 
+                    default:
+                        '<span style="color: #444;">{{page}}</span>/<span>{{pages}}</span>',
+                    last: 'Last Page'
+                }
+            }
+        };
+        let user
         Appointment.create({dateAppointment,symtomName,UserId,DoctorId})
             .then(_ => {
+                return User.findByPk(UserId)
+            })
+            .then(user1 => {
+                user = user1
+                return Doctor.findByPk(DoctorId)
+            })
+            .then(doctor => {
+                let doc = {
+                    html: htm_template,
+                    data: {
+                        name: user.name,
+                        date: dateAppointment,
+                        doctor: doctor.name,
+                        symtom: symtomName
+                    },
+                    type: 'pdf',
+                    path: './output.pdf'
+                };
+                pdf(doc, options);
                 res.redirect("/")
             })
             .catch(err => {

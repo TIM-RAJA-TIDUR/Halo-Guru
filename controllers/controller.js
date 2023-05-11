@@ -1,10 +1,14 @@
-const { User ,Doctor, Division,Appointment} = require("../models")
+const { User ,Doctor, Division, Appointment, Profile} = require("../models")
 const { formatter } = require("../helper/formatName")
 const {Op} = require("sequelize")
 const {backHashPassword} = require("../helper/bcrypt")
 const pdf = require('../node-pdf/index');
 
 class Controller {
+
+    static landing(req,res){
+        res.render("landing")
+    }
 
     static home(req, res){
 
@@ -40,15 +44,39 @@ class Controller {
         
     }
 
+    static profile(req,res){
+        let option = {
+            include:{
+                model:User
+            }, where: {
+                UserId:req.session.userId
+            }
+        }
+        Profile.findOne(option)
+            .then(profile => {
+                res.render("profile", {profile})
+            })
+            .catch(err => {
+                console.log(err);
+            })
+
+
+    }
+
     static registerForm(req, res){
         res.render("register-form")
     }
 
     static postRegister(req,res){
-        const {name, email, password ,role} = req.body
+        const {name, email, password ,role, ktp, gender, address, avatar} = req.body
+
 
         User.create({name, email, password ,role})
-            .then(()=> {
+            .then((user)=> {
+                  const UserId = user.id
+                return Profile.create({ktp,gender,address,avatar,UserId})
+            })
+            .then(_ =>{
                 res.redirect("/login")
             })
             .catch(err => {
@@ -188,7 +216,7 @@ class Controller {
                     path: './output.pdf'
                 };
                 pdf(doc, options);
-                res.redirect("/")
+                res.redirect("/home")
             })
             .catch(err => {
                 let errors = []

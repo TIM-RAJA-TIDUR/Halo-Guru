@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Profile</title>
+</head>
+<body>
+
+    <div class="jumbotron ">
+        <div class="gambar text-center">
+            <img src="<%=profile.avatar%>" alt="" class="rounded-circle border border-dark border-2" />
+        </div>
+        <hr class="col-6">
+        <div class="data">
+            <div class="username">
+                <h4 class="col-6 lead fst-italic">rour Name &nbsp;: <%=profile.User.name%>
+                </h4>
+    
+            </div>
+            <hr class="col-6">
+            <div class="email">
+                <h4 class=" col-6 lead fst-italic"> Your Email &nbsp;:<%=profile.User.email%>&nbsp; </h4>
+    
+            </div>
+            <hr class="col-6">
+            <div class="wa">
+                <h4 class=" col-6 lead fst-italic"> Your ktp Number &nbsp;:<%=profile.ktp%>&nbsp; </h4>
+            </div>
+            <hr class="col-6">
+    
+        </div>
+    
+        <a href="/">Go To  Landing</a>
+    </div>
+</body>
+</html>

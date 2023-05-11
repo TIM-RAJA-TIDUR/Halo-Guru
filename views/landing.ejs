@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kelas qodr</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/icons/logo.svg" type="image/x-icon">
+</head>
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face{
+    font-family:  Qbold;
+    src: url("../fonts/Quicksand-Bold.ttf");
+}
+@font-face{
+    font-family: Qreguler;
+    src: url("../fonts/Quicksand-Regular.ttf");
+}
+@font-face{
+    font-family: Qmedium;
+    src: url("../fonts/Quicksand-Medium.ttf");
+}
+.text-bold{
+    font-family: Qbold;
+}
+.text-reguler{
+    font-family:  Qreguler;
+}
+.text-medium{
+    font-family: Qmedium ;
+}
+.text-primery{
+    color:#272042
+}
+.text-secondary{
+    color: #8B8BA5;
+}
+    a{
+    text-decoration: none;
+}
+.navbar{
+    flex: 1;
+    min-height: 1rem;
+    display: flex;
+    padding: 2rem 100px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    font-size: 28px;
+    color: #272042;
+}
+.logo img{
+    margin-right: 10px;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:50px
+}
+.list-menu{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+    font-size: 18px;
+}
+.btn-primery{
+    background-color: #fbe0dc;
+
+}
+.btn{
+    width: max-content;
+    font-size: 18px;
+    display: inline-block;
+    padding: 14px 31px;
+    border-radius: 25px 23px 15px 18px;
+}
+.btn-secondary{
+    background: #f7c531;
+}
+section#home{
+    display: flex;
+    padding: 80px 145px;
+    flex-direction: row;
+    min-height: max-content;
+}
+.home-left{
+    width: 45%;
+    padding-right: 80px;
+}
+.home-right{
+   flex: 1;
+}
+.home-right img{
+    max-width: 100%;
+}
+.home-title{
+    font-size: 46px;
+    line-height: 70px;
+    margin-bottom: 10px;
+}
+.home-description{
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 40px;
+}
+section#product{
+    text-align: center;
+    min-height: 100vh;
+    padding: 0 100px;
+}
+.product-subtitle{
+    font-size: 20px;
+}
+.product-title{
+    font-size: 32px;
+    margin: 10px 0 30px 0;
+}
+
+.product-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 20px;
+}
+.product-active{
+    color: #f7c531;
+    font-family: Qmedium!important;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.product-active::before{
+    content: '';
+    width: 80%;
+    height: 4px;
+    display: block;
+    background-color: #f7c531;
+    position: absolute;
+    bottom: 0;
+    border-radius: 50px;
+}
+.product-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+.product-list > .product-item{
+    flex: 1;
+    padding: 50px 0;
+
+}
+.product-list > .product-item img{
+    width: 100%;
+}
+.product-list > .product-item p.title{
+    font-size: 22px;
+    margin: 14px 0 8px 0;
+}
+.product-list > .product-item p.chef{
+    font-size: 16px;
+    margin: 12px;
+}
+.product-list > .product-item .rating img{
+    width:22px;
+}
+
+.product-item .tumbnails img{
+    border-radius: 25% 25px 20% 30%;
+   position: relative;
+   z-index: 5;
+}
+.product-item .tumbnails{
+    position: relative;
+}
+.product-item .tumbnails::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:#D8CBF6;
+    padding: 9px 7px 6px 9px ;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15% 10% 25% 30%;
+}
+.product-item .tumbnails::after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #fdfae5;
+    top: -9px;
+    left: -9px;
+    border-radius: 30% 5% 15% 25%;
+}
+section#testimoni{
+    margin:155px 303px 100px 303px;
+    text-align: center;
+    position: relative;
+}
+#testimoni > img{
+    position: absolute;
+    top: -100px;
+    left: -50px;
+    z-index: -1;
+}
+#testimoni .item .quotes{
+    font-size: 36px;
+    line-height: 50px;
+}
+#testimoni .user-testimoni{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+#testimoni .user-testimoni img{
+    width: 90px;
+    margin-right: 20px;
+}
+#testimoni .user-testimoni .user-details{
+    text-align: left;
+}
+#testimoni .user-testimoni .user-details p{
+    margin-bottom: 6px;
+}
+section#statistic{
+    justify-content: center;
+    display: flex;
+    padding: 100px 292px 100px 291px;
+}
+#statistic .number{
+    padding: 100px 50px 100px 50px;
+}
+
+#statistic .number h3{
+    font-size: 32px;
+    text-align: center;
+}
+#statistic .number p{
+    font-size: 20px;
+    text-align: center;
+}
+
+</style>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+        </div>
+        <div class="menu">
+            <a href="/profile"class="btn btn-primery text-medium text-primery">My Profile</a>
+        </div>
+    </nav>
+    <section id="home">
+        <div class="home-left">
+            <h3 class="home-title text-bold text-primary">Study, Together!</h3>
+            <p class="home-description text-secondary text-reguler">Welcome to the Class</p>
+                    <a href="/home"class="btn btn-secondary text-medium text-primery">Go to the Home</a>
+        </div>
+        <div class="home-right">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ35Ae5Wiv3bFcxeaajAcnjniRHc4mmc51h9A&usqp=CAU" alt="imege-video">
+        </div>
+    </section>
+</body>
+</html>

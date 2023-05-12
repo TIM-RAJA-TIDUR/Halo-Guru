@@ -224,7 +224,7 @@ class Controller {
                 err.errors.forEach(el => {
                     errors.push(el.message)
                 });
-                res.redirect(`/appointment/${DoctorId}?errors=${err}`)
+                res.redirect(`/appointment/${DoctorId}?errors=${errors}`)
             }else{
                 res.send(err)
             }

@@ -33,7 +33,12 @@ module.exports = (sequelize, DataTypes) => {
       allowNull:false,
       validate:{
        notNull:{msg: "Date cannot be empty"},
-       notEmpty:{msg: "Date cannot be empty"}
+       notEmpty:{msg: "Date cannot be empty"},
+       minDate(){
+        if(this.dateAppointment < new Date() && (this.dateAppointment)){
+          throw new Error("The date for the appointment should be set for a future date.");
+        }
+       }
       }
     },
     symtomName: {
